@@ -1,0 +1,13 @@
+{
+  "name": "I2C HAL",
+  "apiVersion": "1.0.0",
+  "author": "Mikolaj Pieklo",
+  "version": "0.0.1",
+  "description": "I2C HAL extension",
+  "extensions": {
+    "I2C HAL": {
+      "type": "HighLevelAnalyzer",
+      "entryPoint": "HighLevelAnalyzer.Hla"
+    }
+  }
+}

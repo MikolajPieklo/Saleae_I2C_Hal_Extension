@@ -53,7 +53,10 @@ class Hla(HighLevelAnalyzer):
                     return
 
                 a = 1 if self.reg_len == '8 bits' else 2
-                byte = str(self.byte_counter - a)
+                if self.byte_counter - a < 0:
+                    byte = "-1"
+                else:
+                    byte = str(self.byte_counter - a)
                 print('Dev: ' + str(hex(self.device_address_number))+' '
                       + self.i2c_operation +  " to reg:" + reg + " len:" + byte)
                 self.byte_counter = 0
